@@ -22,8 +22,9 @@ body {
   border-radius: 10px;
 }
 
-.card{
+.country_card{
   list-style: none;
+  padding-left: 40px;
 }
 
 .country-info {

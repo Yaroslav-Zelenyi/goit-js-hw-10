@@ -1,7 +1,7 @@
 import debounce from 'lodash.debounce';
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import './css/styles.css';
-import { fetchCountry } from './js/fetchCountries';
+import { fetchCountries } from './js/fetchCountries';
 import { clearContainers, markupCountries, markupCountry } from './js/render';
 
 const searchBox = document.querySelector('#search-box');
@@ -12,7 +12,7 @@ searchBox.addEventListener(
   debounce(event => {
     const capital = event.target.value.trim();
     if (capital) {
-      fetchCountry(capital).then(data => {
+      fetchCountries(capital).then(data => {
         console.log(data);
         clearContainers();
         if (data.status === 404) {
